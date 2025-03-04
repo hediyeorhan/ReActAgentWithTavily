@@ -26,6 +26,8 @@ Bu çalışmada, Tavily kullanılarak LLM modelinin web sayfası araştırmalar�
 
 Langgraph kullanılarak chat hafızası bir veri tabanı dosyasına kayıt edilmiştir. Bu sayede eski chat konuşmaları kaybolmamıştır ve geliştirilen model daha tutarlı sonuçlar / cevaplar üretmiştir.
 
+<h3> AGENT </h3>
+
 <br>
 
 Çalışmada kullanılan agent türü __reAct__'tır. Bu agent langgraph kullanılarak kod içerisinde oluşturulmuştur. Oluşturulan agent parametre olarak; api kullanılarak oluşturulan llm modelini, tavily search sonuçlarını ve Langchain hub üzerinden çekilen __hwchase17/react-chat__ prompt'unu almaktadır. __AgentExecutor__ metotu ise oluşturulan react agent, tavily search sonuçları ve chat hafızasını parametre olarak almaktadır. Aynı thread id içerisinde chat hafızası tutulmaktadır. Thread id değişirse chat hafızası sıfırlanmaktadır.
